@@ -6,8 +6,8 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 apt install jq curl -y
 DOMAIN=kekburuk.my.id
-sub=m.youtube.com.ynznih
-SUB_DOMAIN=${sub}.kekburuk.my.id
+sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
+SUB_DOMAIN=m.youtube.com.${sub}.kekburuk.my.id
 CF_ID=sharawiasked@gmail.com
 CF_KEY=22aaf6d5b6c3a5392c8cd5ac65a2066daab62
 set -euo pipefail
